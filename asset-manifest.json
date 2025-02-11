@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/constantinirimia/personal-website-pmm-biz/static/css/main.74d3f309.css",
+    "main.js": "/constantinirimia/personal-website-pmm-biz/static/js/main.23748055.js",
+    "static/js/453.a8b36c29.chunk.js": "/constantinirimia/personal-website-pmm-biz/static/js/453.a8b36c29.chunk.js",
+    "index.html": "/constantinirimia/personal-website-pmm-biz/index.html",
+    "main.74d3f309.css.map": "/constantinirimia/personal-website-pmm-biz/static/css/main.74d3f309.css.map",
+    "main.23748055.js.map": "/constantinirimia/personal-website-pmm-biz/static/js/main.23748055.js.map",
+    "453.a8b36c29.chunk.js.map": "/constantinirimia/personal-website-pmm-biz/static/js/453.a8b36c29.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74d3f309.css",
+    "static/js/main.23748055.js"
+  ]
+}
