@@ -1,5 +1,5 @@
 .site-footer {
-  background: linear-gradient(180deg, #2c5364, #111f24, hsl(0, 0%, 0%));
+  background: linear-gradient(180deg, #2c5364, hsl(0, 0%, 0%));
   color: white;
   padding: 15px;
   text-align: center;
@@ -30,7 +30,7 @@
 }
 
 .site-footer {
-  background: linear-gradient(180deg, hwb(210 0% 98%), #111f24, hsl(0, 0%, 0%));
+  background: linear-gradient(180deg, hwb(210 0% 98%), hsl(0, 0%, 0%));
   color: white;
   padding: 15px 0;
   text-align: center;
