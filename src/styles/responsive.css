@@ -1,0 +1,73 @@
+/* responsive.css */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --nav-height: 60px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding-top: var(--nav-height);
+  }
+
+  .container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+    padding: 0;
+    max-width: 500px; /* Prevents hero images from being too large */
+    margin: auto;
+  }
+
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .nav-container {
+    padding: 12px; /* Slightly increased padding for better touchability */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --nav-height: 50px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .btn {
+    padding: 12px 18px; /* Ensures minimum 48px height for accessibility */
+    font-size: 0.95em;
+  }
+}
