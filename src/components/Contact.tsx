@@ -4,7 +4,7 @@ import contactStyles from "../styles/Contact.module.css";
 const ContactForm: React.FC = () => {
   return (
     <div id="contact" className={contactStyles.container}>
-      <div className={contactStyles.contactInfo}>
+      {/* <div className={contactStyles.contactInfo}>
         <h2> Get in touch with me on LinkedIn!</h2>
         <a
           className={contactStyles.contactButton}
@@ -14,7 +14,7 @@ const ContactForm: React.FC = () => {
         >
           LinkedIn!
         </a>
-      </div>
+      </div> */}
 
       {/* <div id="contact" className={contactStyles.contactForm}>
         <form className={contactStyles.form}>

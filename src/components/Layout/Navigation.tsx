@@ -12,18 +12,31 @@ const Navigation: React.FC = () => {
     }
   };
 
+  // New function to handle LinkedIn click
+  const handleLinkedInClick = () => {
+    window.open(
+      "https://www.linkedin.com/in/ziweichen-z/",
+      "_blank",
+      "noopener noreferrer"
+    );
+    setIsMenuOpen(false);
+  };
+
   const navItems = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Featured", id: "featured" },
-    { label: "Skills", id: "skills" },
-    { label: "Contact", id: "contact" },
+    { label: "Home", id: "home", action: () => scrollToSection("home") },
+    { label: "About", id: "about", action: () => scrollToSection("about") },
+    {
+      label: "Featured",
+      id: "featured",
+      action: () => scrollToSection("featured"),
+    },
+    { label: "Skills", id: "skills", action: () => scrollToSection("skills") },
+    { label: "LinkedIn", id: "linkedin", action: handleLinkedInClick }, // Modified this item
   ];
 
   return (
     <nav className={styles.navigation}>
       <div className={styles.navContainer}>
-        {/* Logo */}
         <div className={styles.logo} onClick={() => scrollToSection("home")}>
           <img
             src={`${process.env.PUBLIC_URL}/pers_logo3.png`}
@@ -33,7 +46,6 @@ const Navigation: React.FC = () => {
           <span>Ziwei Chen</span>
         </div>
 
-        {/* Mobile Menu Icon */}
         <div
           className={styles.menuIcon}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -49,8 +61,6 @@ const Navigation: React.FC = () => {
           ></span>
         </div>
 
-        {/* Navigation Links */}
-
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
           {navItems.map((item, index) => (
             <li
@@ -58,8 +68,8 @@ const Navigation: React.FC = () => {
               style={{ "--item-index": index } as React.CSSProperties}
             >
               <span
-                className={styles.navLink} // Add this class
-                onClick={() => scrollToSection(item.id)}
+                className={styles.navLink}
+                onClick={item.action} // Use the action property instead
               >
                 {item.label}
               </span>

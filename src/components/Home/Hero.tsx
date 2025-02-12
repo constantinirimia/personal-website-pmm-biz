@@ -37,16 +37,6 @@ const Hero: React.FC = () => {
             </button>
 
             <button
-              className={styles.secondaryButton}
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Contact me
-            </button>
-            <button
               className={styles.thirdButton}
               onClick={() =>
                 window.open(
@@ -57,6 +47,17 @@ const Hero: React.FC = () => {
             >
               LinkedIn
             </button>
+
+            {/* <button
+              className={styles.secondaryButton}
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Contact me
+            </button> */}
           </div>
         </div>
 

@@ -9,32 +9,21 @@
   padding: 4rem 2rem;
 }
 
-/* Background Image */
-.backgroundImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500%;
-  height: 500%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(50px); /* Blurry effect */
-  transform: scale(1.1); /* Slight zoom to hide edges */
-  z-index: 1;
-}
-
-/* Dark Overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Slightly darker overlay for better contrast */
   z-index: 2;
 }
 
-/* Content */
 .content {
   position: relative;
   z-index: 3;
@@ -43,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem; /* Increased gap for better spacing */
 }
 
 .textContent {
@@ -53,10 +42,10 @@
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 4rem; /* Slightly larger title */
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .gradientText {
@@ -67,25 +56,28 @@
 }
 
 .text {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  font-size: 1.25rem; /* Slightly larger text */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  opacity: 0.9; /* Slightly reduced opacity for better hierarchy */
 }
 
 .buttonGroup {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start; /* Align buttons to the left */
 }
 
 .primaryButton,
-.secondaryButton {
-  padding: 0.9rem 2rem;
-  border-radius: 6px;
+.secondaryButton,
+.thirdButton {
+  padding: 1rem 2.2rem; /* Slightly larger padding */
+  border-radius: 8px; /* Slightly rounder corners */
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .primaryButton {
@@ -94,68 +86,47 @@
   color: #111827;
 }
 
-.secondaryButton {
-  background: transparent;
-  border: 2px solid rgb(68, 225, 252);
-  color: #a2daf6;
+.thirdButton {
+  background: #0077b5;
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .primaryButton:hover {
   background-color: #5cc8e4;
-}
-
-.secondaryButton:hover {
-  background-color: rgba(161, 216, 241, 0.3);
-}
-
-.thirdButton {
-  padding: 0.9rem 2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: #0077b5; /* LinkedIn Blue */
-  border: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
+  transform: translateY(-2px);
 }
 
 .thirdButton:hover {
-  background: #005582; /* Darker LinkedIn Blue */
+  background: #005582;
+  transform: translateY(-2px);
 }
 
-/* Optional: If you add an icon */
-.thirdButton img {
-  width: 20px;
-  height: 20px;
-}
-
-/* Profile Image */
 .profileImageContainer {
-  width: 500px;
+  width: 500px; /* Slightly smaller image */
   height: 500px;
   position: relative;
   overflow: hidden;
+  border-radius: 12px; /* Rounder corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
 }
 
 .profileImage {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px beige rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 3rem;
   }
 
   .textContent {
@@ -167,14 +138,37 @@
     font-size: 3rem;
   }
 
+  .buttonGroup {
+    justify-content: center; /* Center buttons on mobile */
+  }
+
   .profileImageContainer {
     width: 300px;
     height: 300px;
   }
-
-  .buttonGroup {
-    justify-content: center;
-  }
 }
 
-/* new onessss*/
+@media (max-width: 480px) {
+  .heroContainer {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .thirdButton {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+}

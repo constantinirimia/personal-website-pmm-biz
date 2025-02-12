@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 1.5rem 1rem; /* Reduced padding */
   background: linear-gradient(180deg, #0f2027, #203a43, hwb(210 0% 98%));
   color: white;
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .contactInfo {
